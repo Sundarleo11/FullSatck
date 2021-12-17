@@ -1,0 +1,42 @@
+Hoisting 
+ --------
+JavaScript provides a very interesting feature called as hoisting. This means that you can use a variable or function even before it’s declaration. 
+ 
+Hoisting is a mechanism in JavaScript where variables and function declarations are moved to the top of their scope before code execution. 
+ 
+NOTE: If you use a variable or function and do not declare them somewhere in the code, then it will give an error. 
+ 
+You can use hoisting with both variables and function as shown below
+
+Variable Hoisting 
+-----------------
+Variable hoisting means that you can use a variable even before it has been declared. 
+ 
+Eg., you can use variable as - 
+ 
+console.log(a);      // Prints - undefined ... /* ... Other JavaScript Statements ... */ 
+
+ 
+... var a = 10; 
+ 
+The above prints 'undefined' because only the variable declaration is moved to the top and not it’s definition. 
+ 
+Function Hoisting
+-----------------
+ 
+Function hoisting means that you can use function even before function declaration is done. 
+ 
+Eg., you can use function like this – 
+ 
+console.log( cube(3) );    // Prints - 27 ... /* ... Other JavaScript Statements ... */ ... function cube(n) {     return n*n*n; } 
+ 
+But you cannot use function hoisting when you have used function expression. If you use function expression and use function hoisting, then it will result in an error. 
+ 
+ 
+ 
+2. SCOPE 
+ 
+Scope of a variable is part of code where that variable is accessible. Scope of variable depends where block
+
+1. local scope
+2. Global scope

@@ -1,0 +1,41 @@
+ARRAYS 
+-------
+ 
+Array is an ordered collection of data(can be primitive or non-primitive), used to store multiple values. This helps in storing indefinite number of values. Each item/value has an 'index' attached to it, using which we can access the values. In JavaScript 'index' starts at 0. 
+ 
+The array also contains a property 'length' that stores the number of elements present inside the array. It changes its value dynamically as the size of the array changes. 
+ 
+ Creating an Array 
+ ---------------
+ 
+There are two ways to create an array - 
+ 
+1 Using square brackets - We can create an empty array as - var arrayName = [] and array with initial values as - var arrayName = [value1, value2, …, valueN] 
+ 
+2 Using Array Object - We can create an empty array as - var arrayName = new Array() and array with some length as - var arrayName = new Array(N), where 'N' is length of array. 
+ 
+Another way to create an array using 'Array' object is providing the values in it like - var arrayName = new Array(value1, value2, …, valueN). This will create an array with these elements. 
+ 
+Array is heterogeneous, meaning it can contain different types of value at the same time. Also the array can store primitive and non-primitive values. Eg., var array = ["hammer", 85, {name: "Preeti"}, [0, 2, 6]] 
+ 
+ Accessing Element in Array
+ -------------------------
+ 
+You can access the individual elements of the array using the square bracket notation like - array[1] will return '85'. This also allows you to modify the value like - array[1] = 20 and the array now becomes - ["hammer", 20, {name: "Preeti"}, [0, 2, 6]] 
+ 
+When using array inside an array, you can access the value of inner array directly like - array[3][1] will return '2'. 
+ 
+If you access the array outside it’s range, i.e. you pass an invalid index(whether negative or greater than the length of array), then 'undefined' is returned. 
+ 
+Placing Elements at Outside Array Range 
+--------------------------------------------
+ 
+When you use index outside the range to add elements to an array, the array behaves in a different manner. 
+ 
+When a value is assigned to positive index outside the range of array, then the array stores this value at the specified index and all other indices before it are empty. The length of the array also changes to 'index+1'. 
+ 
+When a negative value is used, then the array stores the element as a key-value pair, where the negative index is the key and the element to be inserted is the value. 
+ 
+You can play around it and check the output. 
+ 
+ 

@@ -1,0 +1,8 @@
+oops
+----
+function to create object
+function-->object
+1.class as template, object is instence of class
+2.constructor mode to make easy to write and read the source code
+3 obj vs Object obj-->key value paire, Object-->constructor function. typeof()
+4. inhertance

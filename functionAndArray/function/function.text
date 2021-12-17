@@ -1,0 +1,59 @@
+Function
+--------
+
+Function contains set of statements that perform some task.
+
+You define a function using 'function' keyword. The syntax for creating a function is – 
+ 
+function functionName(parameters) {   
+    // SET OF STATEMENTS
+    
+ } 
+ 
+You can call the above function as – 
+ 
+functionName(arguments); 
+ 
+The function execution stops either when all the statements have been executed or a return statement is found. The return statement stops the execution of the function and returns the value written after the return keyword. . A function may or may not return some value after its execution
+
+
+Function Arguments 
+------------------
+ 
+JavaScript is a dynamic language and therefore it allows passing different number of arguments to the function and does not give error in these condition - 
+ 
+1. Passing fewer arguments - In this case, when few arguments are passed, the other parameters that does not get any value assigned to them get value 'undefined' by default. 
+ 
+2 .Passing more arguments - In this case, when more arguments are passed, the extra arguments are not considered. 
+ 
+Eg., when you have a add function given below – 
+ 
+function add(a, b, c) {    
+    
+     return a+b+c; 
+     
+     } 
+ 
+console.log( add(10, 20) );  // Prints - NaN --->Not a number
+console.log( add(10, 20, 30, 40) );    // Prints - 60 
+
+
+Arguments Object
+----------------
+Although we will study about Objects in next session, but in context to functions you can have access to arguments passed to function. 
+ 
+The argument object is used to store the arguments passed to the function in an array like object. You can either use the parameter name or argument object to access the values. It is helpful in cases when you don’t know the number of arguments passed to the function. 
+ 
+The number of arguments can be found using - "arguments.length". The arguments can be accessed using the brackets notation as used in arrays - "arguments[i]", where 'i' is a number starting from 0. 
+ 
+Eg., the below code prints all the values of the passed to function – 
+ 
+ 
+function printAll() {     
+    for(var i=0; i<arguments.length; ++i) {    
+        console.log(arguments[i]);    
+         } } 
+ 
+printAll('mango', 'apple');  // Prints - mango  
+apple printAll('fire', 'water', 'ice', 'gas');   // Prints - fire  water  ice  gas 
+ 

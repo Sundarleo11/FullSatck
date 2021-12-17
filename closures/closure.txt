@@ -1,0 +1,8 @@
+1.scope of function in global context  and  function context
+2.Aviod the global function.because large scale function source code if you are using more global function it will override the last variable
+3.to over come this problem used IIFE
+4. let vs IIFE, but here let is not window object, because let block level scope
+5.closure-->function + lexical function in which was exculted,basically to destored object happen.each call function. but it will refelct closure.and it will excisiting in memeory stack queue.
+
+------------------------------------------------------------------
+

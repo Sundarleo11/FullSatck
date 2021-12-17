@@ -1,0 +1,73 @@
+FUNCTION DECLARATION AND EXPRESSION 
+----------------------------------
+ 
+Functions in JavaScript can be defined in two ways – 
+ 
+● Function Definition - Creating a function using function keyword and function name. ● Function Expression - Creating a function as an expression and storing it in a variable. 
+ 
+We have discussed function declaration and expression in detail below - 
+ 
+Function Definition 
+------------------
+ 
+A function definition is creating a function in a normal way, which we have read until now. The syntax is - 
+ 
+function functionName(parameters) {   // SET OF STATEMENTS } 
+ 
+Here, the parameters take values differently for different types of variable. We can either pass primitive value or non-primitive value – 
+ 
+● If the value passed as an argument is primitive, then it gets passed by value. This means that the changes to the argument does not reflect the changes globally and only remains local. Eg., function abc(b) {     b = 20;     console.log(b);   // Prints - 20 } var a = 10; abc(a); console.log(a);    // Prints - 10 
+ 
+● If the value passed as an argument is non-primitive, then it gets passed by reference. This means that change is visible outside the function. Eg., function abc(arr2) {     arr2[1] = 50; 
+
+ 
+    console.log(arr2);  // Prints - Array [10, 50, 30] } var arr1 = [10, 20, 30]; abc(arr1); console.log(arr1);   // Prints - Array [10, 50, 30] 
+ 
+Function Expression 
+--------------------
+ 
+We have discussed that variables can take primitive and non primitive values. So function is one of the possible values that a variable can have. Function expression is used to assign the function to a variable. 
+ 
+Eg, the below code uses the function expression with function name – 
+ 
+var factorial = function fac(n) {     return n < 2 ? 1 : n * fac(n - 1); } console.log(factorial(3));            // Prints – 6 
+ 
+However, note that the name “fact” that this function has can be used only inside the function to refer to itself, it can’t be used outside the function. 
+ 
+The function expression as shown above is named i.e. the function being assigned has a name. We can have anonymous function expressions as well i.e. it does not has a name.  
+ 
+The syntax is – 
+ 
+var variableName = function (parameters) {   // SET OF STATEMENTS } 
+ 
+Eg.,  
+ 
+var factorial = function fac(n) {     var ans = 1;     for(var i = 2; i <= n; i++) {         ans *= i;         return ans;  } console.log(factorial(3));           // Prints - 6 
+ 
+ 
+ 
+
+  PASSING FUNCTION AS ARGUMENT 
+  -----------------------------
+ 
+Functions in JavaScript are basically objects. So we can also pass function as argument to another function.  
+ 
+There are two ways to pass a function – 
+ 
+● First, pass function as argument like - function abc(arg1, functionName); ● Second, define function as an argument like - function abc(arg1, function() { ... }); 
+ 
+Example, 
+ 
+function abc(a, b, compute) {     compute(); } 
+ 
+function multiple(a, b) {     console.log(a*b); } 
+ 
+function add(a, b) {     console.log(a+b);} 
+ 
+abc(5, 2, multiple);  // Prints - 10 abc(5, 2, add);   // Prints - 3 
+ 
+The function passed is also called callback function. A callback is a piece of code that is passed as an argument to other code, which is expected to execute the argument(function) at some convenient time. 
+ 
+But why do we need to use callbacks? - JavaScript is an event driven language, meaning that instead of waiting for a response from a function, it keeps executing the code in sequence. So if you want to execute something after some line of code, then callbacks are very useful. We will see callbacks in upcoming sections. 
+ 
+ 
